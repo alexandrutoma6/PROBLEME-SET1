@@ -15,7 +15,131 @@ namespace SET_1
             //p3();
             //p4();
             //p5();
-            p6();
+            //p6();
+            //p7();
+            //p8();
+            //p9();
+            //p10();
+            //p11();
+            p12();
+        }
+
+        /// <summary>
+        /// Determinati cate numere integi divizibile cu n se afla in intervalul [a, b]. 
+        /// </summary>
+        private static void p12()
+        {
+            int n , a , b , count=0;
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("n= ");
+            n = int.Parse(Console.ReadLine());
+            for (int i = a; i < b + 1; i++)
+            {
+                if (i % n == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine($"{count} numere sunt divizivbile cu {n} din intervalui [{a},{b}]");
+        }
+
+        /// <summary>
+        /// Afisati in ordine inversa cifrele unui numar n.
+        /// </summary>
+        private static void p11()
+        {
+            int n, invers = 0, save;
+            Console.Write("n= ");
+            n = int.Parse(Console.ReadLine());
+            save = n;
+            while (n != 0)
+            {
+                invers = invers*10 + n % 10;
+                n = n / 10;
+            }
+            Console.WriteLine($"inversul numarului {save} este {invers}");
+        }
+
+        /// <summary>
+        /// Test de primalitate: determinati daca un numar n este prim.
+        /// </summary>
+        private static void p10()
+        {
+            int n ,obs=0;
+            Console.Write("n= ");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 2; i*i <= n && obs == 0; i++)
+            {
+                if (n % i == 0)
+                {
+                    obs += 1;
+                }
+            }
+            if (obs == 0)
+            {
+                Console.WriteLine($"numarul {n} este numar prim");
+            }
+            else
+            {
+                Console.WriteLine($"numarul {n} nu este numar prim");
+            }
+        }
+
+        /// <summary>
+        /// Afisati toti divizorii numarului n. 
+        /// </summary>
+        private static void p9()
+        {
+            Console.Write("n= ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= n/2; i++)
+            {
+                if(n % i == 0)
+                {
+                    Console.WriteLine($"{i} este divizor al lui {n}");
+                }
+            }
+        }
+
+        /// <summary>
+        /// (Swap restrictionat) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. 
+        /// Se cere sa se inverseze valorile lor fara a folosi alte variabile suplimentare.  
+        /// </summary>
+        private static void p8()
+        {
+            int a, b;
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine($"valorile interschimbate fara variabile suplimentare sunt, a={a} si b={b}");
+
+        }
+
+        /// <summary>
+        /// (Swap) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. Se cere sa se inverseze valorile lor. 
+        /// </summary>
+        private static void p7()
+        {
+            int a, b, schimb = 0;
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+
+            schimb = a;
+            a = b;
+            b = schimb;
+            Console.WriteLine($"valorile interschimbate sunt a= {a} si b={b}");
+
+
         }
 
         /// <summary>
