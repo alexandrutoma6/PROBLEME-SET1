@@ -21,7 +21,245 @@ namespace SET_1
             //p9();
             //p10();
             //p11();
-            p12();
+            //p12();
+            //p13();
+            //p14();
+            //p15();
+            //p16();
+            //p17();
+            p18();
+
+        }
+
+        /// <summary>
+        ///Afisati descompunerea in factori primi ai unui numar n.  De ex. pentru n = 1776 afisati 2^3 x 3^1 x 7^2.  
+        /// </summary>
+        private static void p18()
+        {
+            int[] factor= 0;
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= n/2; i++)
+            {
+                if (n % i == 0)
+                {
+                    n = n / i;
+                    factor[i]++;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Determianti cel mai mare divizor comun si cel mai mic multiplu comun a doua numere. Folositi algoritmul lui Euclid. 
+        /// </summary>
+        private static void p17()
+        {
+            int a, b, rest=0, produs=0;
+           
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+            int a1 = a, b2 = b; 
+            produs = a * b;
+
+            while(b > 0)
+            {
+                rest = a % b;
+                a = b;
+                b = rest;
+            }
+            Console.WriteLine($"cel mai mare divizor comun al numerelor {a1} si {b2} este {a}");
+            Console.WriteLine($"cel mai mic multiplu comun al numerelor {a1} si {b2} este {produs/a}");
+
+        }
+
+        /// <summary>
+        /// Se dau 5 numere. Sa se afiseze in ordine crescatoare. (nu folositi tablouri)
+        /// </summary>
+        private static void p16()
+        {
+            int a, b, c, d, e, aux = 0 ;
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("c= ");
+            c = int.Parse(Console.ReadLine());
+            Console.Write("d= ");
+            d = int.Parse(Console.ReadLine());
+            Console.Write("e= ");
+            e = int.Parse(Console.ReadLine());
+            int a1, b2, c3, d4, e5;
+            a1 = a;
+            b2 = b;
+            c3 = c;
+            d4 = d;
+            e5 = e;
+            if (a > b)
+            {
+                aux = a;
+                a = b;
+                b = aux;
+            }
+            if (a > c)
+            {
+                aux = a;
+                a = c;
+                c = aux;
+            }
+            if (a > d)
+            {
+                aux = a;
+                a = d;
+                d = aux;
+            }
+            if (a > e)
+            {
+                aux = a;
+                a = e;
+                e = aux;
+            }
+
+            if (b > c)
+            {
+                aux = b;
+                b = c;
+                c = aux;
+            }
+            if (b > d)
+            {
+                aux = b;
+                b = d;
+                d = aux;
+            }
+            if (b > e)
+            {
+                aux = b;
+                b = e;
+                e = aux;
+            }
+
+            if (c > d)
+            {
+                aux = c;
+                c = d;
+                d = aux;
+            }
+            if (c > e)
+            {
+                aux = c;
+                c = e;
+                e = aux;
+            }
+            if (d > e)
+            {
+                aux = d;
+                d = e;
+                e = aux;
+            }
+
+            Console.WriteLine($"numerele {a1} {b2} {c3} {d4} {e5} ordonate crescator sunt {a} {b} {c} {d} {e}");
+        }
+
+        /// <summary>
+        /// Se dau 3 numere. Sa se afiseze in ordine crescatoare. 
+        /// </summary>
+        private static void p15()
+        {
+            int a, b, c, minim, maxim, mijloc = 0;
+            minim = int.MaxValue;
+            maxim = int.MinValue;
+            Console.Write("a= ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b= ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("c= ");
+            c = int.Parse(Console.ReadLine());
+
+            if (a >= maxim)
+            {
+                maxim = a;
+            }
+            if (b >= maxim)
+            {
+                maxim = b;
+            }
+            if (c >= maxim)
+            {
+                maxim = c;
+            }
+            if (a <= minim)
+            {
+                minim = a;
+            }
+            if (b <= minim)
+            {
+                minim = b;
+            }
+            if (c <= minim)
+            {
+                minim = c;
+            }
+            mijloc = a + b + c  -minim - maxim;
+            Console.WriteLine($"numerele {a},{b},{c} ordonate crescator: {minim}, {mijloc}, {maxim}");
+        }
+
+        /// <summary>
+        /// Determianti daca un numar n este palindrom. (un numar este palindrom daca citit invers obtinem un numar egal cu el, de ex. 121 sau 12321. 
+        /// </summary>
+        private static void p14()
+        {
+            int n, invers = 0, save = 0;
+            Console.Write("n= ");
+            n = int.Parse(Console.ReadLine());
+            save = n;
+            while(n !=0)
+            {
+                invers = invers * 10 + (n % 10);
+                n = n / 10;
+            }
+            if (save == invers)
+            {
+                Console.WriteLine($"numarul {save} este un plindrom");
+            }
+            else
+            {
+                Console.WriteLine($"numarul {save} nu este un plindrom");
+            }
+        }
+
+        /// <summary>
+        /// Determianti cati ani bisecti sunt intre anii y1 si y2.
+        /// </summary>
+        private static void p13()
+        {
+            int y1, y2, save=0;
+            int count = 0;
+            Console.Write("anul y1= ");
+            y1 = int.Parse(Console.ReadLine());
+            Console.Write("anul y2= ");
+            y2 = int.Parse(Console.ReadLine());
+            save = y1;
+            if(y1 % 4 == 1)
+            {
+                y1 += 3;
+            }
+            if (y1 % 4 == 2)
+            {
+                y1 += 2;
+            }
+            if (y1 % 4 == 3)
+            {
+                y1 += 1;
+            }
+            for (int i = y1; i < y2; i+=4) //pentru optimizare se verifica din 4 in 4 ani cati ani sunt
+            {
+                if (i % 4 == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine($"intre anii {save} si {y2} sunt {count} ani bisecti");
         }
 
         /// <summary>
