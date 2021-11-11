@@ -40,40 +40,173 @@ namespace SET_1
             Console.WriteLine();
 
             if (problema == 1)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare. ");
+                Console.WriteLine();
                 p1();
+            }
             if (problema == 2)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare. Tratati toate cazurile posibile. ");
+                Console.WriteLine();
                 p2();
+            }
             if (problema == 3)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("3. Determinati daca n se divide cu k, unde n si k sunt date de intrare. ");
+                Console.WriteLine();
                 p3();
+            }
             if (problema == 4)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("4. Detreminati daca un an y este an bisect. ");
+                Console.WriteLine();
                 p4();
+            }
             if (problema == 5)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("5. Extrageti si afisati a k-a cifra de la sfarsitul unui numar. Cifrele se numara de la dreapta la stanga. ");
+                Console.WriteLine();
                 p5();
+            }
             if (problema == 6)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("6. Detreminati daca trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi. ");
+                Console.WriteLine();
                 p6();
+            }
             if (problema == 7)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("7. (Swap) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. Se cere sa se inverseze valorile lor. ");
+                Console.WriteLine();
                 p7();
+            }
             if (problema == 8)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("8. (Swap restrictionat) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. Se cere sa se inverseze valorile lor fara a folosi alte variabile suplimentare.  ");
+                Console.WriteLine();
                 p8();
+            }
             if (problema == 9)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("9. Afisati toti divizorii numarului n. ");
+                Console.WriteLine();
                 p9();
+            }
             if (problema == 10)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("10. Test de primalitate: determinati daca un numar n este prim.");
+                Console.WriteLine();
                 p10();
+            }
             if (problema == 11)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("11. Afisati in ordine inversa cifrele unui numar n. ");
+                Console.WriteLine();
                 p11();
+            }
             if (problema == 12)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("12. Determinati cate numere integi divizibile cu n se afla in intervalul [a, b]. ");
+                Console.WriteLine();
                 p12();
+            }
             if (problema == 13)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("13. Determianti cati ani bisecti sunt intre anii y1 si y2.");
+                Console.WriteLine();
                 p13();
+            }
             if (problema == 14)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("14. Determianti daca un numar n este palindrom. (un numar este palindrom daca citit invers obtinem un numar egal cu el, de ex. 121 sau 12321. ");
+                Console.WriteLine();
                 p14();
+            }
             if (problema == 15)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("15. Se dau 3 numere. Sa se afiseze in ordine crescatoare. ");
+                Console.WriteLine();
                 p15();
+            }
             if (problema == 16)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("16. Se dau 5 numere. Sa se afiseze in ordine crescatoare. (nu folositi tablouri)");
+                Console.WriteLine();
                 p16();
+            }
             if (problema == 17)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("17. Determianti cel mai mare divizor comun si cel mai mic multiplu comun a doua numere. Folositi algoritmul lui Euclid.");
+                Console.WriteLine();
                 p17();
-
+            }
+            if (problema == 18)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("18. Afisati descompunerea in factori primi ai unui numar n.  De ex. pentru n = 1776 afisati 2^3 x 3^1 x 7^2. ");
+                Console.WriteLine();
+                //p18();
+            }
+            if (problema == 19)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta. De ex. 23222 sau 9009000 sunt astfel de numere, pe cand 593 si 4022 nu sunt. ");
+                Console.WriteLine();
+                //p19();
+            }
+            if (problema == 20)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul). Exemplu: 13/30 = 0.4(3).");
+                Console.WriteLine();
+                //p20();
+            }
+            if (problema == 21)
+            {
+                Console.WriteLine($"Ati ales problema numarul {problema}: ");
+                Console.WriteLine();
+                Console.WriteLine("21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma ``numarul este mai mare sau egal decat x ?``.");
+                Console.WriteLine();
+                //p21();
+            }
 
             Console.WriteLine();
             Console.WriteLine("------------------------------------------------------------------------------------------------");
