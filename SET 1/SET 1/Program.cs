@@ -29,7 +29,7 @@ namespace SET_1
             Console.WriteLine("17. Determianti cel mai mare divizor comun si cel mai mic multiplu comun a doua numere. Folositi algoritmul lui Euclid.");
             Console.WriteLine("18. Afisati descompunerea in factori primi ai unui numar n.  De ex. pentru n = 1776 afisati2^4 x 3^1 x 37^1. ");
             Console.WriteLine("19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta. De ex. 23222 sau 9009000 sunt astfel de numere, pe cand 593 si 4022 nu sunt. ");
-            Console.WriteLine("20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul). Exemplu: 13/30 = 0.4(3).");
+            //Console.WriteLine("20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul). Exemplu: 13/30 = 0.4(3).");
             Console.WriteLine("21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma ``numarul este mai mare sau egal decat x ?``.");
             Console.WriteLine();
             Console.Write("ALEGETI PROBLEMA NUMARUL: ");
@@ -191,26 +191,57 @@ namespace SET_1
                 Console.WriteLine();
                 p19();
             }
-            if (problema == 20)
-            {
-                Console.WriteLine($"Ati ales problema numarul {problema}: ");
-                Console.WriteLine();
-                Console.WriteLine("20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul). Exemplu: 13/30 = 0.4(3).");
-                Console.WriteLine();
-                //p20();
-            }
             if (problema == 21)
             {
                 Console.WriteLine($"Ati ales problema numarul {problema}: ");
                 Console.WriteLine();
                 Console.WriteLine("21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma ``numarul este mai mare sau egal decat x ?``.");
                 Console.WriteLine();
-                //p21();
+                p21();
             }
 
             Console.WriteLine();
             Console.WriteLine("------------------------------------------------------------------------------------------------");
             Console.WriteLine();
+        }
+
+        private static void p21()
+        {
+            Console.WriteLine("NUMARUL N A FOST GENERAT (1-1024)");
+            Random rnd = new Random();
+            int numar = rnd.Next(1025);
+            Console.WriteLine(numar);
+            int x = 512;
+            int y = 256;
+            while(numar != x)
+            {
+                Console.WriteLine($"Numarul este mai mare decat {x}?");
+                if (numar > x)
+                {
+                    Console.WriteLine("DA");
+                    x = x + y / 2;
+                    if (y > 2)
+                    {
+                        y /= 2;
+                    }
+                    
+                }
+                else if (numar < x)
+                {
+                    Console.WriteLine("NU");
+                    x = x - y / 2;
+                    if (y > 2)
+                    {
+                        y /= 2;
+                    }
+                }
+                if(numar == x)
+                {
+                    break;
+                }
+            }
+            Console.WriteLine($"Numarul N este = {numar}");
+            
         }
 
 
